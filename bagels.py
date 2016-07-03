@@ -5,7 +5,8 @@ import random
 # All guesses are compared to the magic number.
 MAGIC_NUMBER = int(random.randrange(100, 1000))
 WIN = False
-GUESSES = 10
+GUESS = 1
+MAX_GUESSES = 10
 
 
 def convert_to_list(integer):
@@ -31,7 +32,7 @@ def evaluate_guess(guess):
     return response
 
 while not WIN:
-    USER_GUESS = int(raw_input('Guess #{}: '.format(21 - GUESSES)))
+    USER_GUESS = int(raw_input('Guess #{}: '.format(MAX_GUESSES - GUESS)))
     if USER_GUESS < 100:
         print('Guess must be a three digit number.')
     elif USER_GUESS > 1000:
@@ -43,8 +44,8 @@ while not WIN:
             WIN = True
         else:
             print(REPLY)
-            GUESSES -= 1
-            if GUESSES == 0:
+            GUESS += 1
+            if GUESS > MAX_GUESSES:
                 print('No more guesses, you lose!')
                 print('The number was: {}'.format(MAGIC_NUMBER))
                 break
