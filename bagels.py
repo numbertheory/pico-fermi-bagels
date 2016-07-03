@@ -5,7 +5,7 @@ import random
 # All guesses are compared to the magic number.
 MAGIC_NUMBER = int(random.randrange(100, 1000))
 WIN = False
-GUESSES = 20
+GUESSES = 10
 
 
 def convert_to_list(integer):
