@@ -32,7 +32,7 @@ def evaluate_guess(guess):
     return response
 
 while not WIN:
-    USER_GUESS = int(raw_input('Guess #{}: '.format(MAX_GUESSES - GUESS)))
+    USER_GUESS = int(raw_input('Guess #{}: '.format(GUESS)))
     if USER_GUESS < 100:
         print('Guess must be a three digit number.')
     elif USER_GUESS > 1000:
