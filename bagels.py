@@ -43,7 +43,7 @@ while not WIN:
             print('You win!')
             WIN = True
         else:
-            print(REPLY)
+            print(sorted(REPLY))
             GUESS += 1
             if GUESS > MAX_GUESSES:
                 print('No more guesses, you lose!')
