@@ -1,4 +1,6 @@
-"""Pico-Fermi-Bagels game that does not use any strings."""
+"""Pico-Fermi-Bagels game."""
+# The goal here was to make a pico-fermi-bagels game that used
+# math to evaluate the guesses, rather than string manipulation.
 from __future__ import print_function
 import random
 
